@@ -1,1 +1,2 @@
-* commit 완료
+* commit 하는중
+* commit 돼야함
