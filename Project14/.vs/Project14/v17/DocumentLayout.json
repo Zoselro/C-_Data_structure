@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\Project14\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BF9EA7-5A39-4BF9-BFD2-35765839450B}|Project14\\Project14.vcxproj|C:\\Users\\USER\\source\\repos\\Project14\\Project14\\\uBD84\uD560\uCEF4\uD30C\uC77C.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9BF9EA7-5A39-4BF9-BFD2-35765839450B}|Project14\\Project14.vcxproj|solutionrelative:Project14\\\uBD84\uD560\uCEF4\uD30C\uC77C.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BF9EA7-5A39-4BF9-BFD2-35765839450B}|Project14\\Project14.vcxproj|C:\\Users\\USER\\source\\repos\\Project14\\Project14\\fun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9BF9EA7-5A39-4BF9-BFD2-35765839450B}|Project14\\Project14.vcxproj|solutionrelative:Project14\\fun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BF9EA7-5A39-4BF9-BFD2-35765839450B}|Project14\\Project14.vcxproj|C:\\Users\\USER\\source\\repos\\Project14\\Project14\\struct.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9BF9EA7-5A39-4BF9-BFD2-35765839450B}|Project14\\Project14.vcxproj|solutionrelative:Project14\\struct.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9BF9EA7-5A39-4BF9-BFD2-35765839450B}|Project14\\Project14.vcxproj|C:\\Users\\USER\\source\\repos\\Project14\\Project14\\new.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B9BF9EA7-5A39-4BF9-BFD2-35765839450B}|Project14\\Project14.vcxproj|solutionrelative:Project14\\new.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "new.h",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Project14\\Project14\\new.h",
+              "RelativeDocumentMoniker": "Project14\\new.h",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Project14\\Project14\\new.h",
+              "RelativeToolTip": "Project14\\new.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-11T05:01:27.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fun.cpp",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Project14\\Project14\\fun.cpp",
+              "RelativeDocumentMoniker": "Project14\\fun.cpp",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Project14\\Project14\\fun.cpp",
+              "RelativeToolTip": "Project14\\fun.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T04:49:46.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "struct.h",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Project14\\Project14\\struct.h",
+              "RelativeDocumentMoniker": "Project14\\struct.h",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Project14\\Project14\\struct.h",
+              "RelativeToolTip": "Project14\\struct.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-11T04:47:38.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\uBD84\uD560\uCEF4\uD30C\uC77C.cpp",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Project14\\Project14\\\uBD84\uD560\uCEF4\uD30C\uC77C.cpp",
+              "RelativeDocumentMoniker": "Project14\\\uBD84\uD560\uCEF4\uD30C\uC77C.cpp",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Project14\\Project14\\\uBD84\uD560\uCEF4\uD30C\uC77C.cpp",
+              "RelativeToolTip": "Project14\\\uBD84\uD560\uCEF4\uD30C\uC77C.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T04:42:28.856Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

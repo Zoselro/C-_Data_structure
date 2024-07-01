@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\Project12\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D94339-EA7B-4C09-AEE4-0E796EFDA7A9}|Project12\\Project12.vcxproj|C:\\Users\\USER\\source\\repos\\Project12\\Project12\\Queue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E1D94339-EA7B-4C09-AEE4-0E796EFDA7A9}|Project12\\Project12.vcxproj|solutionrelative:Project12\\Queue.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Queue.cpp",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Project12\\Project12\\Queue.cpp",
+              "RelativeDocumentMoniker": "Project12\\Queue.cpp",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Project12\\Project12\\Queue.cpp",
+              "RelativeToolTip": "Project12\\Queue.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-09T07:36:37.626Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

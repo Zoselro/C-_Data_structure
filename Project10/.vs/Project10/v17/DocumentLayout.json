@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\Project10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA9926AB-E21C-4C99-B2EA-5EA871227C83}|Project10\\Project10.vcxproj|C:\\Users\\USER\\source\\repos\\Project10\\Project10\\\uC7AC\uADC0\uD568\uC218.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA9926AB-E21C-4C99-B2EA-5EA871227C83}|Project10\\Project10.vcxproj|solutionrelative:Project10\\\uC7AC\uADC0\uD568\uC218.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\uC7AC\uADC0\uD568\uC218.cpp",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Project10\\Project10\\\uC7AC\uADC0\uD568\uC218.cpp",
+              "RelativeDocumentMoniker": "Project10\\\uC7AC\uADC0\uD568\uC218.cpp",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Project10\\Project10\\\uC7AC\uADC0\uD568\uC218.cpp",
+              "RelativeToolTip": "Project10\\\uC7AC\uADC0\uD568\uC218.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-09T05:40:37.958Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

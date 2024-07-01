@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\Project1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81A45D45-98CD-4881-B2C2-9EE5E58C80D7}|Project1\\Project1.vcxproj|C:\\Users\\USER\\source\\repos\\Project1\\Project1\\hello.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{81A45D45-98CD-4881-B2C2-9EE5E58C80D7}|Project1\\Project1.vcxproj|solutionrelative:Project1\\hello.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "hello.cpp",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Project1\\Project1\\hello.cpp",
+              "RelativeDocumentMoniker": "Project1\\hello.cpp",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Project1\\Project1\\hello.cpp",
+              "RelativeToolTip": "Project1\\hello.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-08T04:29:59.934Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
