@@ -8,7 +8,9 @@ curList::curList(){
 }
 
 void curList::insertNode(int value){
-    Node* newNode = (Node*)malloc(sizeof(Node));
+    //Node* newNode = (Node*)malloc(sizeof(Node));
+    Node* newNode = new Node();
+    
     //첫 노드 삽입
     if(head == nullptr){
         head = newNode;

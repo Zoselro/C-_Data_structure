@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	binarySearchTree* bst=new binarySearchTree();
+	binarySearchTree* bst = new binarySearchTree();
 	bst->insert(5);
 	bst->insert(2);
 	bst->insert(3);
@@ -16,8 +16,13 @@ int main() {
 	bst->print(bst->getRoot());
 	cout << '\n';
 
-	bst->deleteNode(2);
+	bst->deleteNode(4);
+	bst->deleteNode(3);
+	bst->deleteNode(1);
+	bst->deleteNode(1000);
 	bst->print(bst->getRoot());
+
+
 
 /*	cout << '\n';
 	bst->insert(3);

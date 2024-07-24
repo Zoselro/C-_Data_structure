@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/*class Base {
+class Base {
 public:
     virtual void display() { // 가상 함수
         cout << "Display from Base class" << endl;
@@ -13,7 +13,7 @@ public:
     void display() override { // 파생 클래스에서 가상 함수 재정의
         cout << "Display from Derived class" << endl;
     }
-};*/
+};
 
 class Base2 {
     public:
@@ -30,15 +30,15 @@ class Dervied2 : public Base2 {
 };
 
 int main() {
-    /*Base *b;
+    Base *b;
     Derived d;
-    b = &d;*/
+    b = &d;
 
     Base2 * b2;
     Dervied2 d2;
     b2 = &d2;
 
-    //b->display(); // Derived 클래스의 display()가 호출됨
+    b->display(); // Derived 클래스의 display()가 호출됨
     b2->print();
     
     return 0;

@@ -9,6 +9,7 @@ using namespace std;
 template <typename Any>
 Any Sum(Any, Any);
 
+
 int main(){
     int a = 3;
     int b = 4;
@@ -19,7 +20,6 @@ int main(){
     cout << Sum(c,d) << endl;
 
     cout << Sum(a,(int)c) << endl;
-
 
     return 0;
 }

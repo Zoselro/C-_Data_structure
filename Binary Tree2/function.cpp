@@ -8,20 +8,22 @@ using namespace std;
 /// </summary>
 /// <param name="elem(삽입할 원소)"></param>
 void binarySearchTree::insert(int elem) {
-	//새로 삽입할 노드
-	Node* addNode = new Node;
-	//맨처음 삽입이라면 루트에 넣어주기
-	if (root == nullptr) {
-		addNode->data = elem;
-		addNode->parent = nullptr;
-		addNode->leftChild = nullptr;
-		addNode->rightChild = nullptr;
-		root = addNode;
-		return;
-	}
+	Node* addNode = new Node();
+    addNode->data = elem;
+    addNode->leftChild = nullptr;
+    addNode->rightChild = nullptr;
+	
+	//처음 삽입 할 노드
+    if (root == nullptr) {
+        root = addNode; // 트리가 비어있으면 루트에 삽입
+        addNode->parent = nullptr;
+        return;
+    }
 
 	//현재 노드를 가리키는 노드(초기값 root노드)
 	Node* curNode = root;
+	Node* p = nullptr;
+
 	while (1) {
 		//인풋값이 현재 curNode가 가리키는 노드의 데이터값보다 작다면
 		while (curNode->data > elem) {
@@ -58,7 +60,6 @@ void binarySearchTree::insert(int elem) {
 			}
 		}
 	}
-
 }
 
 /// <summary>
@@ -68,28 +69,17 @@ void binarySearchTree::insert(int elem) {
 /// <returns>"원소 찾았다면 해당 원소 가리키는 포인터, 못 찾았다면 nullptr"</returns>
 Node* binarySearchTree::find(int elem) {
 	Node* curNode = root;
-	//트리가 비어있다면 nullptr반환
-	if (curNode == nullptr) {
-		return nullptr;
-	}
-	while (1) {
-		//현재 찾는값이 curNode가 가리키는 데이터값보다 작으면
-		while (curNode->data > elem) {
-			//왼쪽 자식노드로 
-			curNode = curNode->leftChild;
+
+	while(curNode != nullptr){
+		if(curNode->data == elem){
+			return curNode;
+		} else if(curNode->data > elem){
+			curNode = curNode -> leftChild;
+		}else{
+			curNode = curNode -> rightChild;
 		}
-		//찾는 값이 curNode가 가리키는 데이터값보다 같거나 크면
-		while (curNode->data <= elem) {
-			//elem값을 찾았다면 해당 노드 반환
-			if (curNode->data == elem) {
-				return curNode;
-			}
-			//못찾았다면 오른쪽 노드로
-			curNode = curNode->rightChild;
-		}
-		//curNode가 nullptr이라면 존재하지 않으므로
-		if (curNode == nullptr) return nullptr;
 	}
+	return nullptr;
 }
 
 /// <summary>
@@ -294,8 +284,6 @@ Node* binarySearchTree::find(int elem) {
 
 int binarySearchTree::deleteNode(int data){
 	Node* p = find(data);
-	cout << "지울 노드 : " << p->data << endl;
-	cout << "루트 노드 : " << root->data << endl;
 
 	//노드가 존재하지 않을경우
 	if(root == nullptr){
@@ -305,6 +293,7 @@ int binarySearchTree::deleteNode(int data){
 
 	if(p == nullptr){
 		cout << "지울 노드를 찾을 수 없음" << endl;
+		return -2;
 	}
 
 	int deleteData = p->data;
@@ -317,23 +306,26 @@ int binarySearchTree::deleteNode(int data){
 		else if(p->parent->rightChild == p){
 			p->parent->rightChild = nullptr;
 		}
+		cout << "지워진 노드 : " << p->data << endl;
 		delete(p);
 	}
 
 	//삭제 할 노드의 오른쪽 자식이 존재 할 경우
 	else if(p->leftChild == nullptr){
 		p->parent->rightChild = p->rightChild;
+		cout << "지워진 노드 : " << p->data << endl;
 		delete(p);
 	}
 	//삭제 할 노드의 왼쪽 자식이 존재 할 경우
 	else if(p->rightChild == nullptr){
 		p->parent->leftChild = p->leftChild;
-	delete(p);
+		cout << "지워진 노드 : " << p->data << endl;
+		delete(p);
 	}
 
-
 	//삭제 할 노드의 자식이 둘 다 존재 할 경우
-	if(p->rightChild != nullptr && p->leftChild != nullptr){
+	//if(p->rightChild != nullptr && p->leftChild != nullptr){
+	else{
 		Node* q = p->rightChild;
 		int deleteData = p->data;
 
@@ -357,7 +349,7 @@ int binarySearchTree::deleteNode(int data){
 		if(q->rightChild != nullptr){
 			q->rightChild->parent = q->parent;
 		}
-
+		cout << "지워진 노드 : " << p->data << endl;
 		delete(q);
 	}
 	return deleteData;
