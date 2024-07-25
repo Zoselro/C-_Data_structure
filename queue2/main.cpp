@@ -11,8 +11,13 @@ struct Node {
 };
 
 int main(){
-    Node * p = new Node();
-    cout << p->leftChild << endl;
+    Node * p = new Node;
+    if(p->leftChild){
+		cout << "nullptr" << endl;
+	}else{
+		cout << "not nullptr" << endl;
+	}
 
+	cout << p->leftChild << endl;
     return 0;
 }

@@ -1,12 +1,14 @@
 #include<iostream>
 #include"treehead.h"
+#include<queue>
 
 using namespace std;
-
 /// <summary>
 /// BST에 새로운 원소 삽입
 /// </summary>
 /// <param name="elem(삽입할 원소)"></param>
+queue<Node*> nodeQueue;
+
 void binarySearchTree::insert(int elem) {
 	Node* addNode = new Node();
     addNode->data = elem;
@@ -17,6 +19,8 @@ void binarySearchTree::insert(int elem) {
     if (root == nullptr) {
         root = addNode; // 트리가 비어있으면 루트에 삽입
         addNode->parent = nullptr;
+
+		nodeQueue.push(addNode);
         return;
     }
 
@@ -35,6 +39,8 @@ void binarySearchTree::insert(int elem) {
 				addNode->leftChild = nullptr;
 				addNode->rightChild = nullptr;
 				curNode->leftChild = addNode;
+
+				nodeQueue.push(addNode);
 				return;
 			}
 			//왼쪽 자식이 존재하면
@@ -52,6 +58,8 @@ void binarySearchTree::insert(int elem) {
 				addNode->leftChild = nullptr;
 				addNode->rightChild = nullptr;
 				curNode->rightChild = addNode;
+
+				nodeQueue.push(addNode);
 				return;
 			}
 			//오른쪽 자식 존재하면 오른쪽 자식 노드 참조하게함
@@ -81,206 +89,6 @@ Node* binarySearchTree::find(int elem) {
 	}
 	return nullptr;
 }
-
-/// <summary>
-/// 매개변수로 들어온 노드 두개 바꿔주는 함수
-/// </summary>
-/// <param name="a(노드 1)"></param>
-/// <param name="b(노드 2)"></param>
-/*void binarySearchTree::swap(Node* a, Node* b) {
-	//swap용 임시 노드
-	Node* tmp = new Node;
-	//a의 부모 노드의 왼쪽자식이 a라면
-	if (a->parent->leftChild == a) {
-		//b로 연결
-		a->parent->leftChild = b;
-	}
-	//a의 부모 노드의 오른쪽 자식이 b라면
-	else {
-		a->parent->rightChild = b;
-	}
-
-	//b의 부모 노드의 왼쪽 자식이 b라면
-	if (b->parent->leftChild == b) {
-		b->parent->leftChild = a;
-	}
-	//b의 부모 노드의 오른쪽 자식이 a라면
-	else {
-		b->parent->rightChild = a;
-	}
-
-	tmp->data = b->data;
-	b->data = a->data;
-	a->data = tmp->data;
-
-	tmp->parent = b->parent;
-	b->parent = a->parent;
-	a->parent = tmp->parent;
-
-	tmp->leftChild = b->leftChild;
-	b->leftChild = a->leftChild;
-	a->leftChild = tmp->leftChild;
-
-	tmp->rightChild = b->rightChild;
-	b->rightChild = a->rightChild;
-	a->rightChild = tmp->rightChild;
-
-	delete(tmp);
-}*/
-
-/// <summary>
-/// BST에서 매개변수값 제거하는 함수
-/// </summary>
-/// <param name="elem(지울 원소)"></param>
-/*void binarySearchTree::erase(int elem) {
-	Node* delNode = find(elem);
-	//BST에 해당 원소 없다면 바로 종료
-	if (delNode == nullptr) {
-		return;
-	}
-	//해당 원소가 리프 노드라면 : 자식이 없는 노드라면
-	if (delNode->leftChild == nullptr && delNode->rightChild == nullptr) {
-		//해당 원소의 부모노드에서 해당 원소 제거
-		if (delNode->parent->leftChild == delNode) delNode->parent->leftChild = nullptr;
-		else delNode->parent->rightChild = nullptr;
-	}
-	//해당원소가 오른쪽 자식만 있을 때
-	else if (delNode->leftChild == nullptr) {
-		//만약 del노드가 del의 부모노드의 왼쪽자식이라면
-		if (delNode->parent->leftChild == delNode) {
-			delNode->parent->leftChild = delNode->rightChild;
-		}
-		//del노드가 부모노드의 오른쪽자식이라면
-		else {
-			delNode->parent->rightChild = delNode->rightChild;
-		}
-		//해당원소의 오른쪽자식의 부모노드를 해당원소의 부모노드로 설정
-		delNode->rightChild->parent = delNode->parent;
-	}
-	//해당원소가 왼쪽 자식만 있을 때
-	else if (delNode->rightChild == nullptr) {
-		//del노드가 부모 노드의 왼쪽자식이라면
-		if (delNode->parent->leftChild == delNode) {
-			//부모노드의 왼쪽 자식을 해당원소의 왼쪽 자식으로 설정
-			delNode->parent->leftChild = delNode->leftChild;
-		}
-		else {
-			delNode->parent->rightChild = delNode->leftChild;
-		}
-		//해당원소의 왼쪽자식의 부모노드를 해당원소의 부모노드로 설정
-		delNode->leftChild->parent = delNode->parent;
-	}
-
-	//해당 원소가 두 자식 다 있을 때 오른쪽 서브트리에서 제일 작은값과 교체
-	else if(delNode->rightChild != nullptr && delNode->leftChild != nullptr){
-		//오른쪽 서브트리의 루트노드부터 시작해서
-		Node* curNode = delNode->rightChild;
-		//오른쪽 서브트리의 제일 작은 노드까지 
-		while (curNode->leftChild != nullptr) {
-			curNode = curNode->leftChild;
-		}
-		//두 노드를 바꿔주고
-		swap(curNode, delNode);
-		//해당 원소의 부모노드에서 해당 원소 제거
-		if (delNode->parent->leftChild == delNode) delNode->parent->leftChild = nullptr;
-		else delNode->parent->rightChild = nullptr;
-	}
-    //삭제할 원소가 루트 노드일 경우
-    else{
-        if(delNode == root){
-            //루트 노드가 리프 노드일때
-            if(delNode->leftChild == nullptr && delNode->rightChild == nullptr){
-                root = nullptr;
-            }
-            //루트 노드가 오른쪽 자식만 있을 때
-            else if(delNode->leftChild == nullptr){
-                root = delNode->rightChild;
-                root->parent = nullptr;
-            }
-            //루트 노드가 왼쪽 자식만 있을 때
-            else if(delNode->rightChild == nullptr){
-                root = delNode->leftChild;
-                root->parent = nullptr;
-            }
-            //루트 노드가 두 자식 모두 다 있을 때
-            else{
-                Node* successor = delNode->rightChild;
-                while(successor->leftChild != nullptr){
-                    successor = successor->leftChild;
-                }
-                swap(delNode, successor);
-                // 이제 delNode는 리프 노드 또는 하나의 자식만 있는 노드
-                if(delNode->leftChild != nullptr){
-                    delNode->parent->leftChild = delNode->leftChild;
-                    delNode->leftChild->parent = delNode->parent;
-                }
-                else if(delNode->rightChild != nullptr){
-                    delNode->parent->rightChild = delNode->rightChild;
-                    delNode->rightChild->parent = delNode->parent;
-                }
-                else{
-                    if (delNode->parent->leftChild == delNode) delNode->parent->leftChild = nullptr;
-                    else delNode->parent->rightChild = nullptr;
-                }
-            }
-        }
-    }
-	delete(delNode);
-}*/
-
-/// <summary>
-/// 매개변수로 들어온 노드 포인터가 가리키는 노드 제거
-/// </summary>
-/// <param name="elem"></param>
-/*void binarySearchTree::erase(Node* node) {
-	//해당 원소가 리프 노드라면 
-	if (node->leftChild == nullptr && node->rightChild == nullptr) {
-		//해당 원소의 부모노드에서 해당 원소 제거
-		if (node->parent->leftChild == node) node->parent->leftChild = nullptr;
-		else node->parent->rightChild = nullptr;
-	}
-	//해당원소가 오른쪽 자식만 있을 때
-	else if (node->leftChild == nullptr) {
-		//만약 del노드가 del의 부모노드의 왼쪽자식이라면
-		if (node->parent->leftChild == node) {
-			node->parent->leftChild = node->rightChild;
-		}
-		//del노드가 부모노드의 오른쪽자식이라면
-		else {
-			node->parent->rightChild = node->rightChild;
-		}
-		//해당원소의 오른쪽자식의 부모노드를 해당원소의 부모노드로 설정
-		node->rightChild->parent = node->parent;
-	}
-	//해당원소가 왼쪽 자식만 있을 때
-	else if (node->rightChild == nullptr) {
-		//del노드가 부모 노드의 왼쪽자식이라면
-		if (node->parent->leftChild == node) {
-			//부모노드의 왼쪽 자식을 해당원소의 왼쪽 자식으로 설정
-			node->parent->leftChild = node->leftChild;
-		}
-		else {
-			node->parent->rightChild = node->leftChild;
-		}
-		//해당원소의 왼쪽자식의 부모노드를 해당원소의 부모노드로 설정
-		node->leftChild->parent = node->parent;
-	}
-	//해당 원소가 두 자식 다 있을 때 오른쪽 서브트리에서 제일 작은값과 교체
-	else {
-		//오른쪽 서브트리의 루트노드부터 시작해서
-		Node* curNode = node->rightChild;
-		//오른쪽 서브트리의 제일 작은 노드까지 
-		while (curNode->leftChild != nullptr) {
-			curNode = curNode->leftChild;
-		}
-		//두 노드를 바꿔주고
-		swap(curNode, node);
-		//해당 원소의 부모노드에서 해당 원소 제거
-		if (node->parent->leftChild == node) node->parent->leftChild = nullptr;
-		else node->parent->rightChild = nullptr;
-	}
-	delete(node);
-}*/
 
 int binarySearchTree::deleteNode(int data){
 	Node* p = find(data);
@@ -361,10 +169,16 @@ int binarySearchTree::deleteNode(int data){
 /// <param name="root값 넣어주면 됨"></param>
 void binarySearchTree::print(Node* node) {
 	if (node == nullptr) return;
-
 	print(node->leftChild);
 	cout << node->data;
 	print(node->rightChild);
+}
+//들어온 순서대로 출력해주는 함수
+void binarySearchTree::print(){
+	while(!nodeQueue.empty()){
+		cout << nodeQueue.front() << ' ';
+		nodeQueue.pop();
+	}
 }
 
 /// <summary>

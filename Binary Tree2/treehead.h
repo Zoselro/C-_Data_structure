@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 
 struct Node {
 	int data;
@@ -13,6 +13,7 @@ struct Node {
 class binarySearchTree {
 private:
 	Node* root = new Node();
+
 public:
 	binarySearchTree() {
 		root = nullptr;
@@ -22,5 +23,5 @@ public:
 	int deleteNode(int data);
 	void print(Node* node);
 	Node* getRoot();
-
+	void print();
 };
