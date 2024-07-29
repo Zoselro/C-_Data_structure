@@ -26,7 +26,6 @@ void binarySearchTree::insert(int elem) {
 
 	//현재 노드를 가리키는 노드(초기값 root노드)
 	Node* curNode = root;
-	Node* p = nullptr;
 
 	while (1) {
 		//인풋값이 현재 curNode가 가리키는 노드의 데이터값보다 작다면
