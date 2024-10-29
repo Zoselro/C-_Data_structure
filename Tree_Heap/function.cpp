@@ -22,9 +22,9 @@ void treeHeap::swap(int& num1, int& num2){
 int treeHeap::find(int elem){
 
     for(int i = 0 ; i < heapCount ; i ++){
-        /*if (heap[i] == elem){
+        if (heap[i] == elem){
             return i;
-        }*/
+        }
         cout << heap[i] << endl;
     }
     return -1;
