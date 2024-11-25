@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
 
     //Chapter 1
     int i = 0;
@@ -21,18 +22,22 @@ int main(){
 
     do {
         // 별을 i만큼 출력
-        for (j = 0; j < i; j++) {
+        for (j = 0; j < i; j++)
+        {
             printf("*");
         }
         printf("\n");
 
         // i가 10보다 작을 때는 증가, 10일 때부터는 감소
-        if (status) {
+        if (status) 
+        {
             i++;
             if (i == 10) {
                 status = false;  // 10에 도달하면 감소로 전환
             }
-        } else {
+        } 
+        else 
+        {
             i--;
         }
     } while (i > 0);
@@ -43,11 +48,16 @@ int main(){
     status = true;
 
     i = 0;
-    do{
-        for (j = 0; j < 9; j++) {
-            if (j >= center - i && j <= center + i) {
+    do
+    {
+        for (j = 0; j < 9; j++) 
+        {
+            if (j >= center - i && j <= center + i) 
+            {
                 printf("*");
-            } else {
+            } 
+            else 
+            {
                 printf(" ");
             }
         }
@@ -65,18 +75,25 @@ int main(){
     j = 0;
 
     do {
-        for (j = 0; j < 9; j++) {
-            if (j >= center - i && j <= center + i) {
+        for (j = 0; j < 9; j++) 
+        {
+            if (j >= center - i && j <= center + i) 
+            {
                 printf("*");
-            } else {
+            }
+            else
+            {
                 printf(" ");
             }
         }
         printf("\n");
-        if (status) {
+        if (status)
+        {
             i++;
             if (i == 4) status = false;
-        } else {
+        } 
+        else 
+        {
             i--;
         }
     } while (i >= 0);

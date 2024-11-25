@@ -10,7 +10,8 @@
                 //"${file}",
                 "${fileDirname}\\*.cpp",
                 "-o",
-                "${fileDirname}\\build\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
+                "-I","D:\\Visual Code C++\\boost_1_86_0"
             ],
             "options": {
                 "cwd": "C:/mingw64/bin"

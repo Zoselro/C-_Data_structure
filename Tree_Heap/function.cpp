@@ -1,19 +1,22 @@
 #include <iostream>
 #include "heap.h"
 
-void treeHeap::insert(int elem){
+void treeHeap::insert(int elem)
+{
     heap[++heapCount] = elem;
     int child = heapCount;
     int parent = child / 2;
     
-    while(child > 1 && heap[child] > heap[parent]){
+    while(child > 1 && heap[child] > heap[parent])
+    {
         swap(heap[child], heap[parent]);
         child = parent;
         parent = child/2;
     }
 }
 
-void treeHeap::swap(int& num1, int& num2){
+void treeHeap::swap(int& num1, int& num2)
+{
     int tmp = num1;
     num1 = num2;
     num2 = tmp;
